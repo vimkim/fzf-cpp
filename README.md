@@ -2,6 +2,8 @@
 
 A lightweight fuzzy finder implementation in C++ using ncurses, inspired by [fzf](https://github.com/junegunn/fzf). This tool provides an interactive interface for fuzzy searching through text items with real-time filtering and navigation capabilities.
 
+![image](https://github.com/user-attachments/assets/6ebbcb0a-dba5-4496-9b6a-75fd12f5bce1)
+
 ## Features
 
 - Interactive fuzzy search interface
