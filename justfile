@@ -3,3 +3,5 @@ configure:
 
 build:
     cmake --build build
+
+configure-build: configure build
