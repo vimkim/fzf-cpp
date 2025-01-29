@@ -4,6 +4,51 @@ A lightweight fuzzy finder implementation in C++ using ncurses, inspired by [fzf
 
 ![image](https://github.com/user-attachments/assets/6ebbcb0a-dba5-4496-9b6a-75fd12f5bce1)
 
+## Why yet another fuzzy finder?
+
+While excellent fuzzy finders like [fzf](https://github.com/junegunn/fzf) exist, there are specific scenarios where a native C++ implementation provides distinct advantages:
+
+### Simplified Integration
+- **No External Dependencies**: Eliminate the need to bundle external binaries or manage subprocess calls
+- **Native C++ Solution**: Avoid cross-language complications and additional build dependencies
+- **Header-Only Library**: Easy to include in existing C++ projects with minimal setup
+
+### Use Cases
+
+#### Perfect For:
+- Embedded systems where installing additional runtime dependencies isn't feasible
+- Applications requiring tight integration with existing C++ codebases
+- Projects where process spawning is restricted or undesirable
+- Lightweight applications where full fzf functionality isn't necessary
+- Development environments with strict dependency management policies
+
+#### Consider Alternatives When:
+- You need advanced features available in full-featured fuzzy finders
+- Your application can easily manage external process dependencies
+- Performance requirements exceed what a simple implementation can provide
+
+### Design Philosophy
+
+This project prioritizes:
+- Simplicity of integration over feature completeness
+- Minimal dependencies over maximum functionality
+- Native C++ compatibility over cross-language support
+
+If you need more advanced fuzzy finding capabilities, consider using fzf as a subprocess through popen or similar mechanisms. This library aims to fill the gap for simpler use cases where native C++ integration is more valuable than extensive features.
+
+## Getting Started
+
+### Basic Integration
+
+```cpp
+#include "fzf.hpp"
+
+// Example usage
+std::vector<std::string> candidates = {"file1.txt", "file2.txt", "other.doc"};
+FuzzyFinder finder;
+auto results = finder.find("fil", candidates);
+```
+
 ## Features
 
 - Interactive fuzzy search interface
