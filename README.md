@@ -27,7 +27,7 @@ cmake --build build
 # then use build/fzf_cpp binary
 
 # Or, you can use just
-just comfigure-build
+just configure-build
 # this is equivalent to the above two cmake commands
 ```
 
