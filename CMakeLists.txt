@@ -10,15 +10,11 @@ find_package(Curses REQUIRED)
 find_library(CURSES_NCURSES_LIBRARY NAMES libncurses.a ncurses)
 find_library(CURSES_TINFO_LIBRARY NAMES libtinfo.a tinfo)
 
-add_executable(fzf_cpp src/main.cpp)
+add_executable(fzf_cpp src/fzf.cpp src/fzf.hpp)
 
 # Link against static libraries
-target_link_libraries(fzf_cpp PRIVATE 
-    -static
-    ${CURSES_NCURSES_LIBRARY}
-    ${CURSES_TINFO_LIBRARY}
-)
+target_link_libraries(fzf_cpp PRIVATE -static ${CURSES_NCURSES_LIBRARY}
+                                      ${CURSES_TINFO_LIBRARY})
 
 # Include ncurses headers
 target_include_directories(fzf_cpp PRIVATE ${CURSES_INCLUDE_DIR})
-
