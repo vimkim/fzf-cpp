@@ -1,4 +1,4 @@
-# C++ Fuzzy Finder (cpp-fzf)
+# C++ Fuzzy Finder (fzf-cpp)
 
 A lightweight fuzzy finder implementation in C++ using ncurses, inspired by [fzf](https://github.com/junegunn/fzf). This tool provides an interactive interface for fuzzy searching through text items with real-time filtering and navigation capabilities.
 
